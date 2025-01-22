@@ -30,4 +30,3 @@ export const miNombre = 'David'
         return deck;
     };
 
-    export default crearDeck;

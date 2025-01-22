@@ -4,13 +4,13 @@ import _ from 'underscore'
 // modulos importados solo la aprte que se necesita 
 
 // el as sirve para cambiar el nombre del modulo importado 
-import {crearDeck as crearNuevoDeck} from './usecases/crear-deck.js'
+import {crearDeck as crearNuevoDeckc} from './usecases/crear-deck.js'
 // esta es una importacion independeiendte cuando el codigo de importacio se ve asi 
 // import {crearDeck} asi en {}  from './usecases/crear-deck.js'
 
 // expordacion por defectos 
 
-import crearNuevoDecks from './usecases/crear-deck.js'
+import { crearDeck, pedirCarta, valorCarta } from './usecases/index.js';
 
 
 
@@ -38,26 +38,15 @@ import crearNuevoDecks from './usecases/crear-deck.js'
 
 
 
-    deck = crearNuevoDecks( tipos, especiales); // llamamos a la funcion que crea el deck
+    deck = crearDeck( tipos, especiales); // llamamos a la funcion que crea el deck
     
-    //esta funcion me permite tomar una carta del deck
-    const pedirCarta = () => {
-    if (deck.length === 0) {
-        throw 'No hay cartas en el deck';
-        }
-    const carta = deck.pop();
-    return carta;
-    };
+    
 
-    // esta funcion me permite saber el valor de la carta
-    const valorCarta = (carta) => {
-    const valor = carta.substring(0, carta.length - 1);
-    return (isNaN(valor)) ? (valor === 'A') ? 11 : 10 : valor * 1;
-    };
+    
     // esta funcion es para el turno de la computadora
     const turnoComputadora = (puntosMinimos) => {
     do {
-        const carta = pedirCarta();
+        const carta = pedirCarta(deck);
             puntosComputadora = puntosComputadora + valorCarta(carta);
             puntosHtml[1].innerText = puntosComputadora;
         const img = document.createElement('img'); // se crea una imagen de la carta
@@ -96,7 +85,7 @@ import crearNuevoDecks from './usecases/crear-deck.js'
 
     // eventos
     btnPedir.addEventListener('click',() => {
-        const carta = pedirCarta();
+        const carta = pedirCarta(deck);
             puntosJugador = puntosJugador + valorCarta(carta);
             puntosHtml[0].innerText = puntosJugador;
         const img = document.createElement('img'); // se crea una imagen de la carta
