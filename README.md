@@ -19,7 +19,9 @@ El objetivo es alcanzar un puntaje lo más cercano posible a 21 sin pasarte. Com
 
 **💻 Juega ahora**
 
-Puedes probar el juego accediendo a la siguiente URL:
+Puedes probar el juego accediendo a la siguientes URL:
+
+https://batres1530.github.io/Blackjack-Vite-App/
 
 https://67903ac24c2d0888d1bd0c16--sdbm-vite-app.netlify.app/
 
