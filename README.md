@@ -34,8 +34,9 @@ Gana quien tenga el puntaje más cercano a 21 sin pasarse.
 **Pasos para ejecutar el proyecto** 
 
 1. Clonar el Repositorio 
-2. Ejecutar el comando npm i o npm install
-3. para correr el progrma ejecutra npm run dev
+2. Ejecutar el comando ```npm i``` o ```npm install```
+3. para correr el progrma ejecutra ```npm run dev```
+4. Abiri el navegador a ```localhost:3000```
 
 **Producion**
 1. ejecutar el comando npm run bulid
